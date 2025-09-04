@@ -1,8 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Location
-metadata:
-  name: pkredhat-group-location
-  description: "Location that contains the pkredhat group entity"
-spec:
-  targets:
-    - ./pkredhat-group.yaml
