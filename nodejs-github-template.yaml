@@ -10,7 +10,14 @@ metadata:
 spec:
   type: service
 
-  parameters: []   # no input needed for the demo
+  parameters:
+    - title: Project Info
+      required: [port]
+      properties:                
+        port:
+          title: Service Port
+          type: number
+          default: 3000
 
   steps:
     - id: fetch
