@@ -11,13 +11,17 @@ spec:
   type: service
 
   parameters:
-    - title: Project Info
-      required: [port]
-      properties:                
-        port:
-          title: Service Port
-          type: number
-          default: 3000
+  - title: Project Info
+    required: [repoName, port]
+    properties:
+      repoName:
+        title: Repository Name
+        type: string
+        default: demo-nodejs-app
+      port:
+        title: Port you would like your nodejs app to run on (defaults to 3000)
+        type: number
+        default: 3000
 
   steps:
     - id: fetch
