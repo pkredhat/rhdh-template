@@ -1,12 +1,8 @@
 apiVersion: backstage.io/v1alpha1
-kind: Group
+kind: Location
 metadata:
-  name: pkredhat
-  description: "GitHub Org: pkredhat"
+  name: pkredhat-group-location
+  description: "Location that contains the pkredhat group entity"
 spec:
-  type: team
-  profile:
-    displayName: pkredhat
-    email: phknezev@redhat.com
-    picture: https://avatars.githubusercontent.com/u/9919?s=200&v=4
-  children: []
+  targets:
+    - ./pkredhat-group.yaml

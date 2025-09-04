@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: pkredhat
+  description: "GitHub Org: pkredhat"
+spec:
+  type: team
+  profile:
+    displayName: pkredhat
+    email: phknezev@redhat.com
+  children: []
