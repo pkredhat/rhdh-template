@@ -12,7 +12,7 @@ spec:
 
   parameters:
   - title: Project Info
-    required: [repoName, port]
+    required: [namespace, repoName, port]
     properties:
       repoName:
         title: Repository Name
@@ -25,10 +25,14 @@ spec:
       description:
         title: Description of the application
         type: string
+        default: scaffolder app
       owner:
         title: Owner (must exist in the catalog, e.g. user:guest)
         type: string
         default: user:guest
+      namespace:
+        title: OpenShift Namespace
+        type: string
 
   steps:
     - id: fetch
