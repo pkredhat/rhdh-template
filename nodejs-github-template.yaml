@@ -25,6 +25,10 @@ spec:
       description:
         title: Description of the application
         type: string
+      owner:
+        title: Owner (must exist in the catalog, e.g. user:guest)
+        type: string
+        default: user:guest
 
   steps:
     - id: fetch
