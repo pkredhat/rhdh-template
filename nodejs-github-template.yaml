@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: pk-nodejs-github-demo
-  title: Demo: Scaffold a Node.js App
+  title: Scaffold a Node.js App
   description: Demo template that scaffolds a Node.js app and registers it
   tags:
     - nodejs
