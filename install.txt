@@ -1,0 +1,11 @@
+oc new-project demo-nodejs --description="Node.js demo application" --display-name="Demo Node.js"
+oc create secret docker-registry quay-pull-secret --docker-server=quay-ffz4s.apps.cluster-ffz4s.ffz4s.sandbox3066.opentlc.com --docker-username=quayadmin --docker-password=MTg4MjEy --docker-email=unused@example.com -n demo-nodejs
+oc secrets link default quay-pull-secret --for=pull -n demo-nodejs
+
+
+Secret Name	Value
+OPENSHIFT_SERVER	https://api.cluster-ffz4s.ffz4s.sandbox3066.opentlc.com:6443
+OPENSHIFT_TOKEN	your sha256~... token from oc whoami -t
+QUAY_USER	quayadmin
+QUAY_PASSWORD	MTg4MjEy
+QUAY_REGISTRY	quay-ffz4s.apps.cluster-ffz4s.ffz4s.sandbox3066.opentlc.com
