@@ -22,6 +22,9 @@ spec:
         title: Port you would like your nodejs app to run on (defaults to 3000)
         type: number
         default: 3000
+      description:
+        title: Description of the application
+        type: string        
 
   steps:
     - id: fetch
@@ -39,8 +42,8 @@ spec:
       name: Publish to GitHub
       action: publish:github
       input:
-        repoUrl: github.com?owner=pkredhat&repo=demo-nodejs-app
-        description: Demo Node.js service
+        repoUrl: github.com?owner=pkredhat&repo=${{ parameters.repoName }}
+        description: ${{ parameters.description }}
         defaultBranch: main
         repoVisibility: private
 
